@@ -145,8 +145,57 @@ button{
 }
 .moveup{
 	position: fixed;
-	bottom: 10vw;
+	bottom: 15vw;
 	left: 50%;
 	margin-left: -6vw;
 	width: 12vw;
+}
+.largeTitle{
+	font-size:4.1vw;
+}
+.text-m02{
+	position: fixed;
+	top: 53.8vw;
+	right: 21vw;
+	text-align: right;
+	font-size: 3vw;
+	line-height: 1.8;
+	-webkit-animation:text02 1s 0.5s linear forwards;
+	opacity:0;
+}
+@-webkit-keyframes text02{
+	0% {-webkit-transform:translateX(-60px); opacity:0}
+	100% { -webkit-transform:translateX(0); opacity:1.0}
+}
+.move-left{
+	position: fixed;
+	bottom: 15vw;
+	left: 50%;
+	margin-left: -26vw;
+	width: 52vw;
+}
+
+/*覆盖*/
+.tm-left{
+	right: auto;
+	left:18vw;
+	text-align: left;
+	-webkit-animation:text01-left 1s linear forwards;
+}
+@-webkit-keyframes text01-left{
+	0% {-webkit-transform:translateX(50px); opacity:0.5}
+	100% { -webkit-transform:translateX(0); opacity:1.0}
+}
+
+.tf-left{
+	right: auto;
+	left: 11vw;
+}
+
+.ms-left{
+	right:auto;
+	left: 13.5vw;	
+}
+.l02{
+	top: 73vw;	
 }

@@ -10,10 +10,9 @@
 <script src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	$("body").swipe({swipeUp:swipe1, threshold: 35});
-	
+	$("body").swipe({swipeLeft:swipe1, threshold: 35});
 	function swipe1(event, direction, distance, duration) {
-		window.location="2.html"
+		window.location="3.html"
 	}
 	
 });
@@ -23,15 +22,20 @@ $(function(){
 	<div class="gemdale-wrap">
 		<img src="./images/logo01.png" class="logo01">
 		<img src="./images/logo02.png" class="logo02">
-		<img src="./images/text-frame.png" class="text-frame01">
-		<img src="./images/mansion.png" class="mansion">
-		<div class="text-m01">
-			<div>你有没有想过</div>
-			<div>当你离开之后</div>
-			<div>家人的生活都是什么样子的</div>
+		<img src="./images/text-frame01-left.png" class="text-frame01 tf-left">
+		<img src="./images/mansion-left.png" class="mansion ms-left l02">
+		<div class="text-m01 tm-left">
+			<div class="largeTitle">这一年里母亲说最多的就是</div>
+			<div class="largeTitle">工作再忙，也要按时吃饭</div>
+			<div class="spacer"></div>
 		</div>
-		<img src="./images/up.png" class="moveup">
+		<div class="text-m02 tm-left">
+			<div>你不在家的300多天</div>
+			<div>他们的每一顿</div>
+			<div>都很“凑合”</div>
+		</div>
+		<img src="./images/move-left.png" class="move-left">
 	</div>
-	<img src="./images/H5-11.png">
+	<img src="./images/p101.png">
 </body>
 </html>

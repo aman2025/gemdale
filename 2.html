@@ -10,10 +10,9 @@
 <script src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	$("body").swipe({swipeUp:swipe1, threshold: 35});
-	
+	$("body").swipe({swipeLeft:swipe1, threshold: 35});
 	function swipe1(event, direction, distance, duration) {
-		window.location="2.html"
+		window.location="3.html"
 	}
 	
 });
@@ -26,12 +25,17 @@ $(function(){
 		<img src="./images/text-frame.png" class="text-frame01">
 		<img src="./images/mansion.png" class="mansion">
 		<div class="text-m01">
-			<div>你有没有想过</div>
-			<div>当你离开之后</div>
-			<div>家人的生活都是什么样子的</div>
+			<div class="largeTitle">每次与父亲打电话</div>
+			<div class="largeTitle">他也只是报平安</div>
+			<div class="spacer"></div>
 		</div>
-		<img src="./images/up.png" class="moveup">
+		<div class="text-m02">
+			<div>坐在沙发上看电视的他</div>
+			<div>手里握着十年前拍的全家福</div>
+			<div>眼里是说不出口的落寞与思念</div>
+		</div>
+		<img src="./images/move-left.png" class="move-left">
 	</div>
-	<img src="./images/H5-11.png">
+	<img src="./images/p101.png">
 </body>
 </html>
