@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/gemdale.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("body").swipe({swipeLeft:swipe1, threshold: 35});
+	function swipe1(event, direction, distance, duration) {
+		window.location="3.html"
+	}
+	$("#click").click(function(){
+		$('.popup').show();
+	})
+	$(".close").click(function(){
+		$('.popup').hide();
+	})
+	
+});
+</script>
+</head>
+<body style="background-color: #2C313C;">
+	<button id="click">点击</button>
+	<!-- 表单 -->
+	<!-- <div class="popup">
+		
+	</div> -->
+	<div class="coupon">
+		<img src="./images/close.png" class="close">
+		<div class="c-content">
+			<img src="./images/top1.png"  class="c-top">
+			<img src="./images/bottom1.png"  class="c-bottom">
+			
+			aa
+		</div>
+		
+	</div>
+</body>
+</html>

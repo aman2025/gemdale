@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/gemdale.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("body").swipe({swipeUp:swipe1, threshold: 35});
+	
+	function swipe1(event, direction, distance, duration) {
+		window.location="2.html"
+	}
+	
+});
+</script>
+</head>
+<body class="bg01">
+	<div class="gemdale-wrap">
+		<img src="./images/logo01.png" class="logo01">
+		<img src="./images/logo02.png" class="logo02">
+		<img src="./images/text-frame.png" class="text-frame01">
+		<img src="./images/mansion.png" class="mansion" style="top: 55.5vw;right: 16vw;">
+		<div class="text-m01" style="line-height: 2.1;top:37vw;right: 17vw"> 
+			<div>辛苦了一年的自己</div>
+			<div>当然也值得更好</div>
+		</div>
+		<img src="./images/move-left.png" class="move-left">
+	</div>
+	<img src="./images/H5-11.png">
+</body>
+</html>
