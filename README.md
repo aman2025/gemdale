@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # 前端服务启动步骤
 
@@ -44,3 +45,7 @@ npm run build
 npm run lint
 ```
 
+=======
+# gemdale
+gemdale html5
+>>>>>>> 7a7d83f959a17e6132de4240e111f586e479bc58
