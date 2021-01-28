@@ -1,2 +1,0 @@
-# gemdale
-gemdale html5

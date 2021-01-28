@@ -1,0 +1,152 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html {
+	font-size:16px;
+	height:100%;
+}
+body {
+  background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
+	text-align:center;
+	height:100%;
+	color: #fff;
+}
+body,div,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,a {
+    margin: 0;
+    padding: 0;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color:transparent; 
+  -webkit-user-select:none; 
+}
+a {
+  color:#fff;
+  text-decoration: none;
+  background-color: transparent;
+	-webkit-tap-highlight-color:transparent; /*解决Safari 点击时 标签文本被选中，有底色*/
+    -webkit-user-select:none; 
+}
+a:active,
+a:hover{
+  outline: 0;
+	text-decoration:none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+.img-circle{
+	border-radius:50%;
+}
+.pull-left{
+	float:left;	
+}
+.pull-right{
+	float:right;	
+}
+.text-right{
+	text-align:right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*表单*/
+input,
+button,
+textarea{
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: none; 
+  background-color: transparent;
+	-webkit-tap-highlight-color:transparent; /*点击时标签不加亮，没背景色*/
+    -webkit-user-select:none; 
+}
+button{
+	border:none;
+	overflow:visible;	
+}
+.gemdale-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+.bg01{
+	background-color: #0A0B0A;	
+}
+.logo02,
+.logo01{
+	position: fixed;
+	top: 5vw;
+	left: 5vw;
+	height: 8vw;
+}
+.logo02{
+	left: auto;
+	right: 5vw;
+}
+.text-frame01{
+	position: fixed;
+	top: 28vw;
+	right: 11vw;
+	height: 51vw;
+	-webkit-animation:tframe01 1s linear forwards;
+}
+@-webkit-keyframes tframe01{
+	0% {-webkit-transform:translateX(33px); opacity:0.5}
+	100% { -webkit-transform:translateX(0); opacity:1.0}
+}
+.text-m01{
+	position: fixed;
+	top: 36vw;
+	right: 21vw;
+	text-align: right;
+	font-size: 3.5vw;
+	line-height: 1.6;
+	-webkit-animation:text01 1s linear forwards;
+}
+@-webkit-keyframes text01{
+	0% {-webkit-transform:translateX(-50px); opacity:0.5}
+	100% { -webkit-transform:translateX(0); opacity:1.0}
+}
+.mansion{
+	position: fixed;
+	top: 58vw;
+	right: 13.5vw;
+	height: 8vw;
+	-webkit-animation:tframe01 0.8s linear forwards;
+}
+.moveup{
+	position: fixed;
+	bottom: 10vw;
+	left: 50%;
+	margin-left: -6vw;
+	width: 12vw;
+}
