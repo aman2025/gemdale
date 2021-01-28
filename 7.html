@@ -10,7 +10,10 @@
 <script src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	
+	$("body").swipe({swipeDown:swipe1, threshold: 35});
+	function swipe1(event, direction, distance, duration) {
+		window.location="8.html"
+	}
 	
 });
 </script>
