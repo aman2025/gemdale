@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/gemdale.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#click").click(function(){
+		$('.popup').show();
+		$('.mny').hide();
+		$('.cai').show();
+	})
+	$(".close").click(function(){
+		$('.popup').hide();
+	})
+	$(".cai").click(function(){
+		$('.mny').show();
+		$('.cai').hide();
+	})
+	
+});
+</script>
+</head>
+<body >
+	<button id="click" style="margin-top:100px;position: absolute;top:20px;left:50%;margin-left:-20px;background:#f00;border-radius: 10px;color:#fff;padding:5px 10px">点击弹窗</button>
+	<!-- 表单 -->
+	<div class="popup" style="display: block;">
+		<div class="caibox">
+			<img src="./images/close.png" class="close">
+			<img src="./images/cai.png" class="cai">
+			<img src="./images/money.png" class="mny" >
+
+		</div>
+	</div>
+	<img src="./images/p12.png">
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/gemdale.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+});
+</script>
+</head>
+<body class="bg01">
+	<div class="gemdale-wrap">
+		<img src="./images/logo01.png" class="logo01">
+		<img src="./images/logo02.png" class="logo02">
+		<div class="award">
+			<div class="a-box">
+				<img src="./images/center.png" class="cct" id="img1">
+				<img src="./images/pan.png" class="pan" id="img2"> 
+				<img src="./images/award-bg.png" class="abg">
+			</div>
+		</div>
+	</div>
+	<img src="./images/award.png">
+</body>
+</html>
+<script>
+    var oPointer = document.getElementById("img1");
+    var oTurntable = document.getElementById("img2");
+    var cat = 60; //总共6个扇形区域，每个区域约60度;
+    var num = 0; //转圈结束后停留的度数
+    var offOn = true; //是否正在抽奖
+    var min, range;
+    var rdmList = [];
+    var q;
+    oPointer.onclick = function() {
+            //通过中奖结果转盘
+            if (offOn) {
+                //2 老用户，25%概率调发奖
+                var awardNum = "25";
+                var num = randomNum(0, 7);
+                if (awardNum.indexOf(num) == -1) {
+                    // return;
+                    min = cat * 1;
+                    range = cat * 6;
+                    for (var i = 3; i < 10; i++) {
+                        rdmList.push(min + i * 360)
+                    }
+                    q = Math.floor(Math.random() * (rdmList.length))
+                }
+                oTurntable.style.transform = "rotate(0deg)";
+                offOn = !offOn;
+            }
+            ratating(); //调用旋转
+        }
+        //旋转
+    function ratating() {
+        var timer = null;
+        var rdm = 0; //随机度数
+        timer = setInterval(function() {
+            if (Math.floor(rdm / 360) < 3) {
+                var randLoop = randomNum(0, 4);
+                rdm = rdmList[q] + randLoop * range;
+            } else {
+                oTurntable.style.transform = "rotate(" + rdm + "deg)";
+                clearInterval(timer);
+                setTimeout(function() {
+                    offOn = !offOn;
+                    num = rdm % 360;
+                    if (num < cat * 1) {
+                        alert('1680元美容券')
+                    } else if (num < cat * 2) {
+                        alert('599元摄影券')
+                    }
+                }, 4000);
+            }
+        }, 30);
+    }
+
+    //生成[n,m]的随机整数
+    function randomNum(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+</script>

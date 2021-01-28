@@ -126,9 +126,9 @@ button{
 .text-m01{
 	position: fixed;
 	top: 36vw;
-	right: 21vw;
+	right: 16vw;
 	text-align: right;
-	font-size: 3.5vw;
+	font-size: 3.7vw;
 	line-height: 1.6;
 	-webkit-animation:text01 1s linear forwards;
 	letter-spacing: 3px;
@@ -140,7 +140,7 @@ button{
 .mansion{
 	position: fixed;
 	top: 58vw;
-	right: 13.5vw;
+	right: 15.7vw;
 	height: 8vw;
 	-webkit-animation:tframe01 0.8s linear forwards;
 }
@@ -152,12 +152,12 @@ button{
 	width: 12vw;
 }
 .largeTitle{
-	font-size:4.1vw;
+	font-size: 3.7vw;
 }
 .text-m02{
 	position: fixed;
-	top: 53.8vw;
-	right: 21vw;
+	top: 52.8vw;
+	right: 17vw;
 	text-align: right;
 	font-size: 3vw;
 	line-height: 1.8;
@@ -168,6 +168,7 @@ button{
 	0% {-webkit-transform:translateX(-60px); opacity:0}
 	100% { -webkit-transform:translateX(0); opacity:1.0}
 }
+
 .move-left{
 	position: fixed;
 	bottom: 15vw;
@@ -179,8 +180,9 @@ button{
 /*覆盖*/
 .tm-left{
 	right: auto;
-	left:18vw;
+	left: 17vw;
 	text-align: left;
+	letter-spacing: 2px;
 	-webkit-animation:text01-left 1s linear forwards;
 }
 @-webkit-keyframes text01-left{
@@ -195,10 +197,10 @@ button{
 
 .ms-left{
 	right:auto;
-	left: 13.5vw;	
+	left: 15.5vw;
 }
 .l02{
-	top: 73vw;	
+	top: 65vw;
 }
 
 /* 表单 */
@@ -327,19 +329,12 @@ button{
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	width: 80vw;
+	width: 76vw;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	z-index: 99;
 	background-color: #fff;
 	min-height: 210px;
-}
-.coupon .c-content{
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
 	background-color: #D3292A;
 }
 .coupon .c-bottom,
@@ -352,4 +347,130 @@ button{
 .coupon .c-bottom{
 	top: auto;
 	bottom: -5px;
+}
+/* 抵用券 */
+.c-box{
+	padding: 0 0 22px;
+}
+.c-box .h3title{
+	font-size: 24px;
+	padding: 5vw 0;
+	font-weight: normal;
+	letter-spacing: 5px;
+	color: #e8d1c9;
+	background: #E22A2A;
+	position: relative;
+}
+.c-box .h3title::before,
+.c-box .h3title::after{
+	content: '';
+	height: 1px;
+	width: 13vw;
+	position: absolute;
+	top: 9vw;
+	right: 59vw;
+	background: #DDA7A0;
+}
+.c-box .h3title::before{
+	right: auto;
+	left: 57vw;
+}
+.c-box .money{
+	padding:0 5px;
+}
+.c-box .c-dot{
+	padding: 2px 0;
+	font-size: 8px;
+	line-height: 0.8;
+}
+.c-box .c-dot em{
+	font-style: normal;
+	display: block;
+}
+.c-box .c-title01{
+	font-style: normal;
+	display: block;
+	font-size: 15px;
+	padding: 2px 0;
+	letter-spacing: 2px;
+}
+.c-box .c-title03{
+	font-style: normal;
+	display: block;
+	font-size: 10px;
+	padding: 2px 0;
+}
+.c-box .c-title02{
+	font-style: normal;
+	display: block;
+	font-size: 10px;
+	padding: 2px 5px;
+}
+.c-box .c-title02 em{
+	margin-right: 5px
+}
+.c-box .hdsm{
+	padding: 16px 0;
+}
+.c-largeTitle{
+	font-size: 22px;
+	letter-spacing: 3px;
+	padding: 12px 0 0;
+}
+.caibox{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 76vw;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 99;
+	min-height: 210px;
+}
+.mny{
+	display: none;
+}
+.a-box{
+	position: fixed;
+	top: 100vw;
+	left: 50%;
+	width: 85vw;
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 99;
+}
+.pan{
+	position: absolute;
+	top: 11vw;
+	left: 50%;
+	width: 60vw;
+	margin-left: -30vw;
+	-webkit-transition: all 4s;
+	transition: all 4s;
+}
+.cct{
+	position: absolute;
+	top: 31vw;
+	left: 50%;
+	width: 18vw;
+	margin-left: -9vw;
+	z-index: 9;
+}
+.mr01{
+	top: 32vw;
+}
+.mr02{
+	top: 47vw;
+}
+.mr03{
+	top: 64.1vw;
+}
+.idx{
+	right: 20vw;
+}
+.al02{
+	-webkit-animation:al02 1s 0.5s linear forwards;
+}
+@-webkit-keyframes al02{
+	0% {-webkit-transform:translateX(60px); opacity:0}
+	100% { -webkit-transform:translateX(0); opacity:1.0}
 }

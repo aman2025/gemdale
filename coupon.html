@@ -10,10 +10,7 @@
 <script src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	$("body").swipe({swipeLeft:swipe1, threshold: 35});
-	function swipe1(event, direction, distance, duration) {
-		window.location="3.html"
-	}
+	
 	$("#click").click(function(){
 		$('.popup').show();
 	})
@@ -24,21 +21,50 @@ $(function(){
 });
 </script>
 </head>
-<body style="background-color: #2C313C;">
-	<button id="click">点击</button>
+<body >
+	<button id="click" style="margin-top:100px;position: absolute;top:20px;left:50%;margin-left:-20px;background:#f00;border-radius: 10px;color:#fff;padding:5px 10px">点击弹窗</button>
 	<!-- 表单 -->
-	<!-- <div class="popup">
+	<!--
 		
-	</div> -->
-	<div class="coupon">
-		<img src="./images/close.png" class="close">
-		<div class="c-content">
+	 -->
+	<div class="popup" style="display: block;">
+		<div class="coupon">
+			<img src="./images/close.png" class="close">
 			<img src="./images/top1.png"  class="c-top">
-			<img src="./images/bottom1.png"  class="c-bottom">
-			
-			aa
-		</div>
-		
+				<img src="./images/bottom1.png"  class="c-bottom">
+				<div class="c-box">
+					<h3 class="h3title">恭喜您获得</h3>
+					<div class="money">
+						<img src="./images/1000.png" >
+						<!-- <img src="./images/1680.png" >
+						<img src="./images/599.png" >
+						<img src="./images/500.png" >
+						<img src="./images/78.png" >
+						<img src="./images/58.png" > -->
+					</div>
+					<div class="c-largeTitle">购房抵用券</div>
+					<div class="c-dot">
+						<em>●</em>
+						<em>●</em>
+						<em>●</em>
+						<em>●</em>
+						<em>●</em>
+						<em>●</em>
+					</div>
+					<div class="c-title01">凭朋友圈H5转发证明</div>
+					<div class="c-title01">及截屏即可来售楼部领取奖品</div>
+					<div class="c-title03" style="padding-top:5px">活动兑奖时间: 2021.2.1-2021.2.10</div>
+					<div class="c-title03">领取地址:金地.天禧营销中心</div>
+					<div class="hdsm">
+						<img src="./images/hdsm.png" >
+					</div>
+					<div class="c-title02"><em>●</em>所有活动券仅限使用一次，不可折现，不可叠加和重复使用;</div>
+					<div class="c-title02"><em>●</em>所有活动奖品数量有限，先到先得;</div>
+					<div class="c-title02"><em>●</em>分享朋友圈并公开保留3天后方可领取，否则视为无效;</div>
+					<div class="c-title02"><em>●</em>活动更多信息请详询工作人员;</div>
+				</div>
+			</div>
 	</div>
+	<img src="./images/p12.png">
 </body>
 </html>
