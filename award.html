@@ -32,7 +32,7 @@ $(function(){
 <script>
     var oPointer = document.getElementById("img1");
     var oTurntable = document.getElementById("img2");
-    var cat = 60; //总共6个扇形区域，每个区域约60度;
+    var cat = 45; //总共6个扇形区域，每个区域约60度;
     var num = 0; //转圈结束后停留的度数
     var offOn = true; //是否正在抽奖
     var min, range;
@@ -47,11 +47,13 @@ $(function(){
                 if (awardNum.indexOf(num) == -1) {
                     // return;
                     min = cat * 1;
-                    range = cat * 6;
-                    for (var i = 3; i < 10; i++) {
-                        rdmList.push(min + i * 360)
+                    range = cat * 8;
+                    for (var i = 3; i < 11; i++) {
+                        rdmList.push(min + i * 360) 
                     }
+                    console.log(rdmList);
                     q = Math.floor(Math.random() * (rdmList.length))
+                    console.log(q);
                 }
                 oTurntable.style.transform = "rotate(0deg)";
                 offOn = !offOn;
@@ -61,23 +63,59 @@ $(function(){
         //旋转
     function ratating() {
         var timer = null;
-        var rdm = 0; //随机度数
+        var rdm = 0 ; //随机度数
         timer = setInterval(function() {
             if (Math.floor(rdm / 360) < 3) {
                 var randLoop = randomNum(0, 4);
                 rdm = rdmList[q] + randLoop * range;
             } else {
-                oTurntable.style.transform = "rotate(" + rdm + "deg)";
+                oTurntable.style.transform = "rotate(" + (rdm*q) + "deg)";
                 clearInterval(timer);
                 setTimeout(function() {
                     offOn = !offOn;
-                    num = rdm % 360;
-                    if (num < cat * 1) {
-                        alert('1680元美容券')
-                    } else if (num < cat * 2) {
-                        alert('599元摄影券')
-                    }
+                    console.log(rdm);
+                    num = (rdm % 360) * q; 
+                    /*
+                     * 45 599元 摄影券
+                     * 90 10000元购房基金
+                     * 135 红包现金
+                     * 180 78元尼莫乐园通票
+                     * 225 500元红星美食券
+                     * 270 58元洗车券
+                     * 315 红包现金
+                     * 360 1680元美容券
+                     */
+                     var quan = ''
+                     switch(num) {
+                        case 45:
+                            quan = '599元摄影券'
+                            break;
+                        case 90:
+                            quan = '10000元购房基金'
+                            break;
+                        case 135:
+                            quan = '红包现金'
+                            break;
+                        case 180:
+                            quan = '78元尼莫乐园通票'
+                            break;
+                        case 225:
+                            quan = '500元红星美食券'
+                            break;
+                        case 270:
+                            quan = '58元洗车券'
+                            break;
+                        case 315:
+                            quan = '红包现金'
+                            break;
+                        case 360:
+                            quan = '1680元美容券'
+                            break;
+                    } 
+                     console.log(quan)
+                     rdmList = [];
                 }, 4000);
+                
             }
         }, 30);
     }
